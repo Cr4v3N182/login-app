@@ -14,12 +14,12 @@ window = sg.Window("Login app", layout=layout, element_justification='c')
 
 while True:
     event, value = window.read()
-    dict_users = {}
+    dict_users = {} #dictionary for the comparison
     match event:
         case "login":
             user = value['user']
             password = value['password']
-            dict_users[user] = password
+            dict_users[user] = password     # holds user and password input.
             print(dict_users)
 
         case "exit":
