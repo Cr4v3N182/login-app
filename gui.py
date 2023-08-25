@@ -1,6 +1,6 @@
 import PySimpleGUI as sg
 
-actual_users= {"matt" : "asd"}
+actual_users= {"matt" : "asd", "john" : "dsa"}
 
 label = sg.Text("Enter your login and password")
 user_info = sg.Text("Enter login:       ")
@@ -23,7 +23,7 @@ while True:
             password = value['password']
             dict_users[user] = password     # holds user and password input.
             print(dict_users)
-            if dict_users == actual_users:
+            if dict_users[user] == actual_users[user]:
                 sg.popup("Acces granted.")
                 break
             else:
