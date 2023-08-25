@@ -25,9 +25,9 @@ while True:
             print(dict_users)
             if dict_users == actual_users:
                 sg.popup("Acces granted.")
+                break
             else:
                 sg.popup("Wrong username or password.")
-
         case "exit":
             break
         case sg.WIN_CLOSED:
